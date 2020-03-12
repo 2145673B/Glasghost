@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Glasghost</string>
+    <string name="app_cap">GlasGhost</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Log In</string>
+    <string name="register">Register</string>
 </resources>
