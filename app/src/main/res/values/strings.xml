@@ -5,8 +5,11 @@
     <string name="password">Password</string>
     <string name="login">Log In</string>
     <string name="register">Register</string>
-    <string name="imgs">Image</string>
+    <string name="imgs">Image didn\'t load</string>
     <string name="forgot">Forgot password?</string>
     <string name="welcome">Welcome to the University of Glasgow!</string>
+    <string name="firstTutorialText">Greetings, newcomer, and welcome to Glasgow University! I am Sir Adam Smith!</string>
+    <string name="level">Level 1: 20/100 XP</string>
+    <string name="myProfile">My profile</string>
 
 </resources>
