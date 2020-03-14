@@ -8,6 +8,14 @@
 
 
     <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@tools:sample/avatars"
+        tools:layout_editor_absoluteX="294dp"
+        tools:layout_editor_absoluteY="291dp" />
+
+    <ImageView
         android:id="@+id/bg_img_map"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -18,7 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -139,6 +147,39 @@
         app:srcCompat="@drawable/tick" />
 
     <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="49dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="208dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_img_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/play" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="85dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="596dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_img_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="108dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="524dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_img_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/friends2" />
+
+    <ImageView
         android:id="@+id/imageView4"
         android:layout_width="59dp"
         android:layout_height="30dp"
@@ -148,6 +189,8 @@
         app:layout_constraintHorizontal_bias="0.786"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/tick" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
