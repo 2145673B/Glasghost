@@ -76,9 +76,9 @@
 
     <ScrollView
         android:id="@+id/questListView"
-        android:layout_width="298dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="140dp"
+        android:layout_width="310dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +91,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/cobalt"
                 android:text="Quest #1: Boyd Orr Building (D1) 100XP"
@@ -99,7 +99,7 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/cobalt"
                 android:text="Quest #2: Mathematics Building (D4) 50XP"
@@ -107,10 +107,10 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:layout_width="300dp"
+                android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:background="@color/cobalt"
-                android:text="Quest #3: Bower Building (D1) 80XP"
+                android:text="Quest #3: The Mackintosh House (D13) 80XP"
                 android:textColor="@android:color/background_light"
                 android:textSize="15sp" />
         </LinearLayout>
