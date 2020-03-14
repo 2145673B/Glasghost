@@ -18,49 +18,49 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="416dp"
-        android:layout_height="72dp"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:alpha="0.95"
         android:background="@color/cobalt"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="62dp"
-        android:layout_height="62dp"
+        android:id="@+id/logo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:background="#FFFFFF"
-        android:padding="2dp"
+        android:contentDescription="@string/imgs"
+        android:src="@drawable/ghost"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo_round" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/glasghost"
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:fontFamily="cursive"
         android:gravity="center"
+        android:text="@string/app_cap"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/background_light"
         android:textSize="45sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
         tools:text="@string/app_cap" />
 
     <ImageView
@@ -76,8 +76,8 @@
 
     <ScrollView
         android:id="@+id/questListView"
-        android:layout_width="254dp"
-        android:layout_height="54dp"
+        android:layout_width="298dp"
+        android:layout_height="62dp"
         android:layout_marginTop="140dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.065"
@@ -88,7 +88,32 @@
             android:id="@+id/questListViewLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@color/cobalt"
+                android:text="Quest #1: Boyd Orr Building (D1) 100XP"
+                android:textColor="@android:color/background_light"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@color/cobalt"
+                android:text="Quest #2: Mathematics Building (D4) 50XP"
+                android:textColor="@android:color/background_light"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@color/cobalt"
+                android:text="Quest #3: Bower Building (D1) 80XP"
+                android:textColor="@android:color/background_light"
+                android:textSize="15sp" />
+        </LinearLayout>
     </ScrollView>
 
 
