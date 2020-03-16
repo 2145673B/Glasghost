@@ -2,6 +2,7 @@ package com.example.glasghost;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -38,6 +39,7 @@ public class TutorialActivity extends AppCompatActivity {
                 }
                 else{
                     i = 0;
+                    startActivity(new Intent(TutorialActivity.this, MapActivity.class));
                 }
             }
         });
