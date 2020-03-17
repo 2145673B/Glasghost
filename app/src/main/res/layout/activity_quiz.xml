@@ -77,8 +77,8 @@
 
     <TextView
         android:id="@+id/speech_bubbleQuiz"
-        android:layout_width="402dp"
-        android:layout_height="77dp"
+        android:layout_width="401dp"
+        android:layout_height="106dp"
         android:fontFamily="cursive"
         android:gravity="left"
         android:padding="18dp"
@@ -294,9 +294,11 @@
         android:id="@+id/multipleChoiceAnswers"
         android:layout_width="306dp"
         android:layout_height="109dp"
-        android:layout_marginTop="520dp"
-        app:layout_constraintStart_toStartOf="@+id/quests"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="91dp"
+        app:layout_constraintBottom_toBottomOf="@+id/quests"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:id="@+id/multipleChoiceViewLayout"
