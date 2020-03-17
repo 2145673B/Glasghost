@@ -3,6 +3,7 @@ package com.example.glasghost;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -32,9 +33,28 @@ public class QuizActivity extends AppCompatActivity {
                     speechBubble.setText(strings[i]);
                     i++;
                 } else {
-                    speechBubble.setText("Please attempt the quiz know to win 80XP");
+                    speechBubble.setText("Please attempt the quiz know to win 70XP");
                 }
             }
         });
     }
+
+    private void correctAnswer() {
+        final TextView speechBubble = findViewById(R.id.speech_bubble);
+        ImageButton nextBubble = findViewById(R.id.nextSpeech);
+        speechBubble.setText("Correct. You have earned 70XP");
+        speechBubble.setTextColor(Color.GREEN);
+        TextView level=findViewById(R.id.level);
+        level.setText("Level 1: 90/100 XP");
+    }
+
+    private void wrongAnswer() {
+        final TextView speechBubble = findViewById(R.id.speech_bubble);
+        ImageButton nextBubble = findViewById(R.id.nextSpeech);
+        speechBubble.setText("Wrong. The correct answer is A");
+        speechBubble.setTextColor(Color.RED);
+
+    }
+
+
 }
