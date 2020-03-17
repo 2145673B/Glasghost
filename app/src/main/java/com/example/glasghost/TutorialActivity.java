@@ -39,7 +39,7 @@ public class TutorialActivity extends AppCompatActivity {
                 }
                 else{
                     i = 0;
-                    startActivity(new Intent(TutorialActivity.this, MapActivity.class));
+                    startActivity(new Intent(TutorialActivity.this, DailyQuestsActivity.class));
                 }
             }
         });
