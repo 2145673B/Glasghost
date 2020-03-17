@@ -4,22 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    tools:context=".MapActivity">
-
-
-    <ImageView
-        android:id="@+id/bg_img_map"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/imgs"
-        android:scaleType="centerCrop"
-        android:src="@drawable/map"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbarTop"
-        app:layout_constraintVertical_bias="0.0" />
+    tools:context=".DailyQuestsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarTop"
@@ -34,6 +19,17 @@
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/map_icon"
+        android:layout_width="428dp"
+        android:layout_height="291dp"
+        android:layout_marginTop="364dp"
+        android:contentDescription="@string/imgs"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map" />
 
     <ImageView
         android:id="@+id/settings2"
@@ -77,16 +73,6 @@
         app:layout_constraintTop_toTopOf="@+id/toolbarTop"
         tools:text="@string/app_cap" />
 
-    <ImageView
-        android:id="@+id/compass"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="88dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/compass" />
 
     <ScrollView
         android:id="@+id/questListView"
@@ -124,66 +110,14 @@
                 android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:background="@color/cobalt"
-                android:text="Quest #2: The Mackintosh House (D13) 80XP"
+                android:text="Quest #3: The Mackintosh House (D13) 80XP"
                 android:textColor="@android:color/background_light"
                 android:textSize="15sp" />
         </LinearLayout>
     </ScrollView>
 
-    <ImageView
-        android:id="@+id/questCheckpoint"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="228dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bg_img_map"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.669"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/flag" />
 
-    <ImageView
-        android:id="@+id/questCheckpoint1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="416dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bg_img_map"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.84"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/flag" />
 
-    <ImageView
-        android:id="@+id/newQuest1"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="216dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/question" />
-
-    <ImageView
-        android:id="@+id/newQuest"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="188dp"
-        android:layout_marginLeft="188dp"
-        android:layout_marginTop="348dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/question" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="412dp"
-        android:layout_marginEnd="312dp"
-        android:layout_marginRight="312dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/student_icon" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
@@ -291,6 +225,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
         app:srcCompat="@drawable/white" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:text="Map Discovery"
+        app:layout_constraintBottom_toTopOf="@+id/map_icon"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
