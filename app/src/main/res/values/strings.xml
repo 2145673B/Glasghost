@@ -11,5 +11,7 @@
     <string name="firstTutorialText">Greetings, newcomer, and welcome to Glasgow University! I am Sir Adam Smith!</string>
     <string name="level">Level 1: 20/100 XP</string>
     <string name="myProfile">My profile</string>
+    <string name="quizString">Please answer to win 80XP.\n How much is 2+2:\n \nA)4\nB)5\nC)6\n D)E</string>
+    <string name="first_text_for_history_quiz">Greetings Jacob, let\'s learn about the history of the Kelvin Building, before attempting the quiz...</string>
 
 </resources>
