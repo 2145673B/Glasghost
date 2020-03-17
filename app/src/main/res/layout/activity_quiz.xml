@@ -88,8 +88,8 @@
         android:text="@string/quizString"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/nextSpeech"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="@+id/quests"
+        app:layout_constraintTop_toBottomOf="@+id/nextSpeech" />
 
     <TextView
         android:id="@+id/speech_bubbleHistory"
@@ -295,64 +295,67 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar3"
         app:srcCompat="@drawable/white" />
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="565dp" />
 
-    <TextView
-        android:id="@+id/correctMultipleChoiceOption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="A)1907"
-        android:onClick="correctAnswer"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
+    <ScrollView
+        android:id="@+id/multipleChoiceAnswers"
+        android:layout_width="306dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="520dp"
         app:layout_constraintStart_toStartOf="@+id/quests"
-        app:layout_constraintTop_toBottomOf="@+id/speech_bubbleQuiz" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/wrongMultipleChoice2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="465dp"
-        android:onClick="wrongAnswer"
-        android:text="B)2007"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/quests"
-        app:layout_constraintTop_toTopOf="@+id/quests" />
+        <LinearLayout
+            android:id="@+id/multipleChoiceViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/wrongMultipleChoice3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:onClick="wrongAnswer"
-        android:text="C)1957"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/quests"
-        app:layout_constraintTop_toBottomOf="@+id/wrongMultipleChoice2" />
+            <TextView
+                android:id="@+id/correctMultipleChoiceOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="correctAnswer"
+                android:text="A)1960"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="18dp"
+                tools:layout_editor_absoluteY="509dp" />
 
-    <TextView
-        android:id="@+id/wrongMultipleChoice4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:onClick="wrongAnswer"
-        android:text="D)1856"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/quests"
-        app:layout_constraintTop_toBottomOf="@+id/wrongMultipleChoice3" />
+            <TextView
+                android:id="@+id/wrongMultipleChoice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="wrongAnswer"
+                android:text="B)2007"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="18dp"
+                tools:layout_editor_absoluteY="545dp" />
+
+            <TextView
+                android:id="@+id/wrongMultipleChoice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="wrongAnswer"
+                android:text="C)1957"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="18dp"
+                tools:layout_editor_absoluteY="572dp" />
+
+            <TextView
+                android:id="@+id/wrongMultipleChoice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="wrongAnswer"
+                android:text="D)1856"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="18dp"
+                tools:layout_editor_absoluteY="599dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

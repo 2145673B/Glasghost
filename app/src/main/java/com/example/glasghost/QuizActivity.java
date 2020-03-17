@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 public class QuizActivity extends AppCompatActivity {
     static int i = 0;
+    final String[] strings = {"The Hunterian houses one of the most important collections of the work of Scottish architect,....","designer and artist, Charles Rennie Mackintosh (1868-1928) and his wife, the artist Margaret Macdonald Mackintosh (1864-1933).",
+            "The Mackintosh House is the house of the couple who lived there from 1906 to 1914","The house was demolished in the early 1960s but the original fixtures were preserved and reassembled, complete with the contents, as an integral part of the Hunterian Art Gallery.", "The architects took pains to ensure that the sequence of rooms exactly reflected the original. Virtually the same views and effects of natural light are enjoyed as 78 Southpark Avenue stood only some 100 metres away.","Other areas of the original house - cloakroom, kitchen, bathroom, and secondary bedrooms - have not been incorporated.",
+            "The interiors, completed in 1981, have been furnished with the Mackintoshes' own furniture - all to Mackintosh's design - and decorated as closely as possible to the original."};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,12 +23,9 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void nextSpeechBubble() {
-        final TextView speechBubble = findViewById(R.id.speech_bubble);
+        final TextView speechBubble = findViewById(R.id.speech_bubbleHistory);
         ImageButton nextBubble = findViewById(R.id.nextSpeech);
 
-        final String[] strings = {"he Kelvin Building, originally known as the Natural Philosophy Building, was named after Lord Kelvin and was designed by Scottish architect James Miller.",
-                "The building was completed in 1906 and was formally opened by the Prince and Princess of Wales on 23 April 1907.",
-                "The Kelvin Building was also the first building at Gilmorehill to be equipped with the American Electric Utilities Company's 'Metaphone' system, an internal telephone network that could operate without a central switchboard."};
 
         nextBubble.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,10 +38,11 @@ public class QuizActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 
-    private void correctAnswer() {
-        final TextView speechBubble = findViewById(R.id.speech_bubble);
+    private void correctAnswer(View view) {
+        final TextView speechBubble = findViewById(R.id.speech_bubbleHistory);
         ImageButton nextBubble = findViewById(R.id.nextSpeech);
         speechBubble.setText("Correct. You have earned 70XP");
         speechBubble.setTextColor(Color.GREEN);
@@ -48,7 +50,7 @@ public class QuizActivity extends AppCompatActivity {
         level.setText("Level 1: 90/100 XP");
     }
 
-    private void wrongAnswer() {
+    private void wrongAnswer(View view) {
         final TextView speechBubble = findViewById(R.id.speech_bubble);
         ImageButton nextBubble = findViewById(R.id.nextSpeech);
         speechBubble.setText("Wrong. The correct answer is A");

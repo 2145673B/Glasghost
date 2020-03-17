@@ -124,7 +124,7 @@
                 android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:background="@color/cobalt"
-                android:text="Quest #2: The Mackintosh House (D13) 80XP"
+                android:text="Quest #2: The Mackintosh House (D13) 70XP"
                 android:textColor="@android:color/background_light"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -139,6 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.669"
         app:layout_constraintStart_toStartOf="parent"
+        android:onClick="moveToQuiz"
         app:srcCompat="@drawable/flag" />
 
     <ImageView
