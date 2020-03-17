@@ -41,22 +41,22 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void correctAnswer(View view) {
+    public void correctAnswer(View view) {
         final TextView speechBubble = findViewById(R.id.speech_bubbleHistory);
         ImageButton nextBubble = findViewById(R.id.nextSpeech);
         speechBubble.setText("Correct. You have earned 70XP");
-        speechBubble.setTextColor(Color.GREEN);
         TextView level=findViewById(R.id.level);
         level.setText("Level 1: 90/100 XP");
     }
 
-    private void wrongAnswer(View view) {
-        final TextView speechBubble = findViewById(R.id.speech_bubble);
+    public void wrongAnswer(View view) {
+        final TextView speechBubble = findViewById(R.id.speech_bubbleHistory);
         ImageButton nextBubble = findViewById(R.id.nextSpeech);
         speechBubble.setText("Wrong. The correct answer is A");
-        speechBubble.setTextColor(Color.RED);
-
     }
 
 
+    public void returnToMap(View view) {
+        startActivity(new Intent(QuizActivity.this, MapActivity.class));
+    }
 }

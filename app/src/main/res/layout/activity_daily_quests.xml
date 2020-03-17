@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="74dp"
                 android:background="@drawable/backforquestlist"
-                android:text="The Mackintosh House (D13) 80XP"
+                android:text="The Mackintosh House (D13) 70XP"
                 android:textColor="@android:color/background_light"
                 android:textSize="15sp" />
 

@@ -63,20 +63,17 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar2"
         tools:text="@string/app_cap" />
 
+
     <ImageView
         android:id="@+id/adamSmith"
         android:layout_width="225dp"
         android:layout_height="212dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginBottom="2dp"
         android:contentDescription="@string/imgs"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/speech_bubble"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/adamsmith" />
-
+        app:layout_constraintBottom_toTopOf="@+id/speech_bubbleHistory"
+        app:srcCompat="@drawable/adamsmith"
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/speech_bubbleQuiz"
@@ -95,17 +92,13 @@
         android:id="@+id/speech_bubbleHistory"
         android:layout_width="401dp"
         android:layout_height="107dp"
-        android:layout_marginBottom="250dp"
         android:fontFamily="cursive"
         android:gravity="left"
         android:padding="18dp"
         android:text="@string/first_text_for_history_quiz"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteY="296dp" />
 
     <ImageButton
         android:id="@+id/nextSpeech"
@@ -252,6 +245,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="returnToMap"
         android:contentDescription="@string/imgs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/friends"
