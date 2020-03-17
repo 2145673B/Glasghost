@@ -5,18 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.Button;
 
-public class MapActivity extends AppCompatActivity {
+public class DailyQuestsActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_daily_quests);
     }
 
-    public void moveToQuiz(View view) {
-        startActivity(new Intent(MapActivity.this, QuizActivity.class));
+    public void moveToMapActivity(View view) {
+        startActivity(new Intent(DailyQuestsActivity.this, MapActivity.class));
     }
 }
