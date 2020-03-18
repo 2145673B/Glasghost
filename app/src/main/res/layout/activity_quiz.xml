@@ -7,8 +7,6 @@
     tools:context=".QuizActivity">
 
 
-
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="0dp"
@@ -27,9 +25,13 @@
         android:id="@+id/logo2"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:contentDescription="@string/imgs"
         android:src="@drawable/ghost"
-        tools:layout_editor_absoluteX="8dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/glasghost2"
@@ -51,10 +53,13 @@
 
     <ImageView
         android:id="@+id/adamSmith"
-        android:layout_width="193dp"
-        android:layout_height="174dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:contentDescription="@string/imgs"
-        android:scaleType="centerCrop"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/speech_bubbleHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2"
         app:srcCompat="@drawable/adamsmith" />
 
@@ -69,80 +74,37 @@
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/multipleChoiceAnswers"
-        app:layout_constraintEnd_toEndOf="@+id/quests"
-        app:layout_constraintTop_toBottomOf="@+id/nextSpeech"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="@+id/quests" />
 
     <TextView
         android:id="@+id/speech_bubbleHistory"
-        android:layout_width="416dp"
-        android:layout_height="142dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/back"
         android:fontFamily="cursive"
-        android:gravity="left"
+        android:gravity="center"
         android:padding="18dp"
         android:text="@string/first_text_for_history_quiz"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/adamSmith" />
+        app:layout_constraintBottom_toTopOf="@+id/speech_bubbleQuiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/nextSpeech"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="365dp"
-        android:layout_marginLeft="365dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@null"
         android:contentDescription="@string/imgs"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/speech_bubble"
+        app:layout_constraintBottom_toBottomOf="@+id/speech_bubbleHistory"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
-        app:layout_constraintStart_toStartOf="@+id/speech_bubbleQuiz"
-        app:layout_constraintTop_toBottomOf="@+id/speech_bubbleHistory"
         app:srcCompat="@drawable/double_arrow" />
-
-    <ImageView
-        android:id="@+id/profile_pic"
-        android:layout_width="117dp"
-        android:layout_height="117dp"
-        android:contentDescription="@string/imgs"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="@+id/level"
-        app:layout_constraintTop_toBottomOf="@+id/levelBar"
-        app:srcCompat="@drawable/student_male" />
-
-    <ProgressBar
-        android:id="@+id/levelBar"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="0dp"
-        android:layout_height="5dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:background="@color/colorPrimary"
-        android:indeterminate="false"
-        android:max="100"
-        android:progress="20"
-        app:layout_constraintEnd_toEndOf="@+id/level"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/level"
-        app:layout_constraintTop_toBottomOf="@+id/level" />
-
-    <TextView
-        android:id="@+id/level"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/level"
-        android:textColor="@android:color/background_dark"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <ImageView
         android:id="@+id/settings"
@@ -272,7 +234,7 @@
         android:alpha="0.2"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.235"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar3"
         app:srcCompat="@drawable/white" />
@@ -282,11 +244,11 @@
         android:id="@+id/multipleChoiceAnswers"
         android:layout_width="306dp"
         android:layout_height="109dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginRight="104dp"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:id="@+id/multipleChoiceViewLayout"
@@ -298,6 +260,7 @@
                 android:id="@+id/correctMultipleChoiceOption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="cursive"
                 android:onClick="correctAnswer"
                 android:text="A)1960"
                 android:textColor="@android:color/black"
@@ -309,6 +272,7 @@
                 android:id="@+id/wrongMultipleChoice2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="cursive"
                 android:onClick="wrongAnswer"
                 android:text="B)2007"
                 android:textColor="@android:color/black"
@@ -320,6 +284,7 @@
                 android:id="@+id/wrongMultipleChoice3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="cursive"
                 android:onClick="wrongAnswer"
                 android:text="C)1957"
                 android:textColor="@android:color/black"
@@ -331,6 +296,7 @@
                 android:id="@+id/wrongMultipleChoice4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="cursive"
                 android:onClick="wrongAnswer"
                 android:text="D)1856"
                 android:textColor="@android:color/black"

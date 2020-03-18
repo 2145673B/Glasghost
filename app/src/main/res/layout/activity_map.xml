@@ -105,24 +105,27 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/questsProgress"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:background="@color/cobalt"
                 android:text="Quests in progress:"
                 android:textColor="@android:color/background_light"
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/kelvin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:background="@color/cobalt"
                 android:text="Quest #1: Kelvin Building (B8) 100XP"
                 android:textColor="@android:color/background_light"
                 android:textSize="15sp" />
 
             <TextView
-                android:layout_width="328dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/mackintosh"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
                 android:background="@color/cobalt"
                 android:text="Quest #2: The Mackintosh House (D13) 70XP"
                 android:textColor="@android:color/background_light"
@@ -134,19 +137,19 @@
         android:id="@+id/questCheckpoint"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="228dp"
+        android:layout_marginBottom="220dp"
+        android:onClick="moveToQuiz"
         app:layout_constraintBottom_toBottomOf="@+id/bg_img_map"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.669"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="moveToQuiz"
         app:srcCompat="@drawable/flag" />
 
     <ImageView
         android:id="@+id/questCheckpoint1"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="416dp"
+        android:layout_marginBottom="425dp"
         app:layout_constraintBottom_toBottomOf="@+id/bg_img_map"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.84"
@@ -157,9 +160,9 @@
         android:id="@+id/newQuest1"
         android:layout_width="60dp"
         android:layout_height="50dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="216dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="195dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/question" />
@@ -170,7 +173,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="188dp"
         android:layout_marginLeft="188dp"
-        android:layout_marginTop="348dp"
+        android:layout_marginTop="310dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/question" />
@@ -258,6 +261,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:contentDescription="@string/imgs"
+        android:onClick="moveToDailyQuests"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

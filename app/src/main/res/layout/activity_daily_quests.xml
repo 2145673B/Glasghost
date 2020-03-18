@@ -6,6 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".DailyQuestsActivity">
 
+    <ImageView
+        android:id="@+id/profile_pic3"
+        android:layout_width="117dp"
+        android:layout_height="117dp"
+        android:contentDescription="@string/imgs"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/level3"
+        app:layout_constraintStart_toStartOf="@+id/level3"
+        app:layout_constraintTop_toBottomOf="@+id/level3"
+        app:srcCompat="@drawable/student_male" />
+
+    <ProgressBar
+        android:id="@+id/levelBar3"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="@color/colorPrimary"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="20"
+        app:layout_constraintEnd_toEndOf="@+id/level3"
+        app:layout_constraintStart_toStartOf="@+id/level3"
+        app:layout_constraintTop_toBottomOf="@+id/level3" />
+
+    <TextView
+        android:id="@+id/level3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/level"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarTop" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarTop"
         android:layout_width="0dp"
@@ -19,17 +56,6 @@
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/map_icon"
-        android:layout_width="428dp"
-        android:layout_height="291dp"
-        android:layout_marginTop="364dp"
-        android:contentDescription="@string/imgs"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/map" />
 
     <ImageView
         android:id="@+id/settings2"
@@ -76,13 +102,16 @@
 
     <ScrollView
         android:id="@+id/questListView"
-        android:layout_width="389dp"
-        android:layout_height="183dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/currentQuests"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:id="@+id/questListViewLayout"
@@ -91,38 +120,88 @@
             android:orientation="vertical">
 
 
-            <CheckBox
-                android:id="@+id/KelvinBuildingCheckBox"
+            <Button
+                android:id="@+id/MainGatehouse"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="50dp"
                 android:background="@drawable/backforquestlist"
-                android:text="Kelvin Building (B8) 100XP"
+                android:gravity="left|center_vertical"
+                android:padding="10dp"
+                android:text="Main Gatehouse (A21) 80XP"
                 android:textColor="@android:color/background_light"
                 android:textSize="15sp" />
 
-
-            <CheckBox
-                android:id="@+id/MackintoshHouseCheckBox"
+            <Button
+                android:id="@+id/Chapel"
                 android:layout_width="match_parent"
-                android:layout_height="74dp"
+                android:layout_height="50dp"
                 android:background="@drawable/backforquestlist"
-                android:text="The Mackintosh House (D13) 70XP"
+                android:gravity="left|center_vertical"
+                android:padding="10dp"
+                android:text="Chapel (D13) 100XP"
                 android:textColor="@android:color/background_light"
                 android:textSize="15sp" />
 
-            <CheckBox
-                android:id="@+id/BoydOrrCheckBox"
+            <Button
+                android:id="@+id/BoydOrr"
                 android:layout_width="match_parent"
-                android:layout_height="74dp"
+                android:layout_height="50dp"
                 android:background="@drawable/backforquestlist"
-                android:text="The Boyd Orr building (D1) 120XP"
+                android:gravity="left|center_vertical"
+                android:padding="10dp"
+                android:text="The Boyd Orr building (D1) 200XP"
                 android:textColor="@android:color/background_light"
                 android:textSize="15sp" />
 
         </LinearLayout>
     </ScrollView>
 
+    <ScrollView
+        android:id="@+id/questListView2"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <LinearLayout
+            android:id="@+id/questListViewLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/KelvinBuilding"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/backforquestlist"
+                android:gravity="left|center_vertical"
+                android:padding="10dp"
+                android:text="Kelvin Building (B8) 100XP"
+                android:textColor="@android:color/background_light"
+                android:textSize="15sp" />
+
+
+            <Button
+                android:id="@+id/MackintoshHouse"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/backforquestlist"
+                android:gravity="left|center_vertical"
+                android:padding="10dp"
+                android:text="The Mackintosh House (D13) 70XP"
+                android:textColor="@android:color/background_light"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
     <androidx.appcompat.widget.Toolbar
@@ -208,6 +287,7 @@
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
         android:contentDescription="@string/imgs"
+        android:onClick="moveToMapActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
@@ -227,34 +307,130 @@
         android:alpha="0.2"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar4"
         app:srcCompat="@drawable/white" />
-
-    <Button
-        android:id="@+id/map_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="128dp"
-        android:layout_marginRight="128dp"
-        android:text="Map Discovery"
-        android:onClick="moveToMapActivity"
-        app:layout_constraintBottom_toTopOf="@+id/map_icon"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/dailyQuest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginLeft="148dp"
-        android:layout_marginBottom="12dp"
         android:text="Daily Quests"
         android:textColor="@android:color/black"
         android:textSize="19sp"
         app:layout_constraintBottom_toTopOf="@+id/questListView"
+        app:layout_constraintEnd_toEndOf="@+id/questListView"
         app:layout_constraintStart_toStartOf="@+id/questListView" />
+
+    <TextView
+        android:id="@+id/currentQuests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Quests"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/questListView2"
+        app:layout_constraintEnd_toEndOf="@+id/questListView2"
+        app:layout_constraintStart_toStartOf="@+id/questListView2" />
+
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/questListView"
+        app:layout_constraintTop_toTopOf="@+id/questListView"
+        app:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/cross4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/questListView2"
+        app:layout_constraintTop_toTopOf="@+id/questListView2"
+        app:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/cross5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/questListView2"
+        app:layout_constraintTop_toTopOf="@+id/questListView2"
+        app:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/cross2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/questListView"
+        app:layout_constraintTop_toTopOf="@+id/questListView"
+        app:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/cross3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/questListView"
+        app:layout_constraintTop_toTopOf="@+id/questListView"
+        app:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/treasureChest"
+        android:layout_width="180dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_pic3"
+        app:layout_constraintEnd_toStartOf="@+id/profile_pic3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/level3"
+        app:srcCompat="@drawable/treasure" />
+
+    <ImageView
+        android:id="@+id/tick"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/questListView"
+        app:layout_constraintTop_toTopOf="@+id/questListView"
+        app:srcCompat="@drawable/tick" />
+
+    <ImageView
+        android:id="@+id/tick2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/questListView"
+        app:layout_constraintTop_toTopOf="@+id/questListView"
+        app:srcCompat="@drawable/tick" />
+
+    <ImageView
+        android:id="@+id/tick3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/questListView"
+        app:layout_constraintTop_toTopOf="@+id/questListView"
+        app:srcCompat="@drawable/tick" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

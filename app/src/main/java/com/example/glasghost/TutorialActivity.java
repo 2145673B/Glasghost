@@ -18,7 +18,7 @@ public class TutorialActivity extends AppCompatActivity {
     }
 
     private void nextSpeechBubble(){
-        final TextView speechBubble = findViewById(R.id.speech_bubble);
+        final TextView speechBubble = findViewById(R.id.speech_bubbleHistory);
         ImageButton nextBubble = findViewById(R.id.nextSpeech);
 
         final String[] strings = {"Well technically I am his ghost, hahaha! You must be quite surprised!",
@@ -38,8 +38,8 @@ public class TutorialActivity extends AppCompatActivity {
                     i++;
                 }
                 else{
-                    i = 0;
                     startActivity(new Intent(TutorialActivity.this, DailyQuestsActivity.class));
+                    i = 0;
                 }
             }
         });

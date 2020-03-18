@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import java.util.concurrent.TimeUnit;
 
 public class QuizActivity extends AppCompatActivity {
     static int i = 0;
@@ -45,8 +48,17 @@ public class QuizActivity extends AppCompatActivity {
         final TextView speechBubble = findViewById(R.id.speech_bubbleHistory);
         ImageButton nextBubble = findViewById(R.id.nextSpeech);
         speechBubble.setText("Correct. You have earned 70XP");
-        TextView level=findViewById(R.id.level);
-        level.setText("Level 1: 90/100 XP");
+        //TextView level=findViewById(R.id.level);
+        //level.setText("Level 1: 90/100 XP");
+        MapActivity.setFlagVisibility();
+        DailyQuestsActivity.setXP();
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                returnToMap();
+            }
+        }, 1500);
     }
 
     public void wrongAnswer(View view) {
@@ -57,6 +69,10 @@ public class QuizActivity extends AppCompatActivity {
 
 
     public void returnToMap(View view) {
+        startActivity(new Intent(QuizActivity.this, MapActivity.class));
+    }
+
+    public void returnToMap() {
         startActivity(new Intent(QuizActivity.this, MapActivity.class));
     }
 }
